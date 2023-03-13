@@ -5,11 +5,6 @@ Input Data Source:
 # Daily rainfall
 downloa from      wget https://downloads.psl.noaa.gov/Datasets/20thC_ReanV3/Dailies/accumsMO/apcp.$i.nc
 
-
-
-
-
-
 local:
     frain = xr.open_mfdataset('//Users/dongxiay/Documents/data/daily/*.nc', parallel=True)
 Gadi: /g/data/ua8/LE_models/20CRv3/mean_daily/
@@ -20,14 +15,7 @@ Gadi: /g/data/ua8/LE_models/20CRv3/mean_daily/
 # Daily nino34 data 
 http://climexp.knmi.nl/data/inino34_daily.dat
     
-# weekly DMI data 
-/Users/dongxiay/Documents/data/dmi.nc
-download 
-#!/bin/bash
-for i in {1981..2020}
-do
-    wget https://downloads.psl.noaa.gov/Datasets/20thC_ReanV3/accumsMO/apcp.$i.nc
-done
+
 
 # Daily MJO
     dt = pd.read_csv("http://passage.phys.ocean.dal.ca/~olivere/data/mjoindex_IHR_20CRV2c.dat")
